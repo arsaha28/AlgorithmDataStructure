@@ -44,7 +44,22 @@ public class NLinkedList<T> {
 	}
 	
 	public void delete(T value) {
-		
+		if(header == null) {
+			return ;
+		}else {
+			Node<T> currentNode = header;
+			Node<T> previousNode = null;
+			if(currentNode.getValue().equals(value)) {
+				header = currentNode.getNext();
+			}
+			while(!(currentNode.getNext() == null)) {
+				if(currentNode.getValue().equals(value)) {
+					previousNode.setNext(currentNode.getNext());
+				}
+				previousNode = currentNode;
+				currentNode = currentNode.getNext();
+			}
+		}
 	}
 	
 	public boolean find(T val) {

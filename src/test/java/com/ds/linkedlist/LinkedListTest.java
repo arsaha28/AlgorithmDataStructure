@@ -45,5 +45,15 @@ public class LinkedListTest {
 		assertEquals(false, linkedList.find("arnab"));
 	
 	}
+	@Test
+	public void delete() {
+		NLinkedList<String>  linkedList = new NLinkedList<String>();
+		linkedList.insert("Arnab");
+		linkedList.insert("Anish");
+		linkedList.insert("Rakesh");
+		assertEquals(true, linkedList.find("Arnab"));
+		assertEquals(false, linkedList.find("arnab"));
+	
+	}
 
 }
