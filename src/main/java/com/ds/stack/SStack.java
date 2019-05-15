@@ -1,8 +1,9 @@
 package com.ds.stack;
 
-public class SStack {
+public class SStack<E> {
 	
-	private int store[] = new int[3];
+	private int initialCapacity = 10;
+	private Object store[] = new Object[initialCapacity];
 	private int top = -1;
 	
 	public void push(int item) {
@@ -13,20 +14,20 @@ public class SStack {
 			store[top] = item;
 		}		
 	}
-	
-	public int peek() {
+	@SuppressWarnings("unchecked")
+	public E peek() {
 		if(top == -1) {
 			throw new RuntimeException("Stack is empty");			
 		}else {
-			int item = store[top];
-			return item;
+			return (E)store[top];
 		}	
 	}
-	public int pop() {
+	@SuppressWarnings("unchecked")
+	public E pop() {
 		if(top == -1) {
 			throw new RuntimeException("Stack is empty");			
 		}else {
-			int item = store[top];
+			E item = (E) store[top];
 			top = top -1;
 			return item;
 		}	

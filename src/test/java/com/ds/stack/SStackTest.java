@@ -8,13 +8,13 @@ public class SStackTest {
 	
 	@Test
 	public void push() {
-		SStack sStack = new SStack();
+		SStack<Integer> sStack = new SStack<Integer>();
 		sStack.push(10);
 		sStack.push(11);
 		sStack.push(12);
-		assertEquals(12, sStack.peek());
-		assertEquals(12, sStack.pop());
-		assertEquals(11, sStack.peek());
+		assertEquals(new Integer(12), sStack.peek());
+		assertEquals(new Integer(12), sStack.pop());
+		assertEquals(new Integer(11), sStack.peek());
 	}
 
 }
