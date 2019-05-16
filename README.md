@@ -8,4 +8,8 @@ First part of this repository is dedicated to data structures
   * PriorityQueue
   * BinarySearch Tree
   
+# Algorithm
+  * Sorting
+     * Insertion Sort
+  
   
