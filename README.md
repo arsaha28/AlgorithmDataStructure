@@ -1,6 +1,6 @@
 # Algorithm and Datastructure project
-Goal of this repository is to provide details examples and implementation of most common data structures and algorithm.
-First part of this repository is dedicated to data structures
+Goal of this repository is to provide detail examples and implementation of most common data structures and algorithm.
+First part of this repository is dedicated for data structures
 # Datastructure [WIP]
   * Stack
   * LinkedList
@@ -8,7 +8,7 @@ First part of this repository is dedicated to data structures
   * PriorityQueue
   * BinarySearch Tree
   
-# Algorithm
+# Algorithm [WIP]
   * Sorting
      * Insertion Sort
   
