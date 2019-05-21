@@ -47,6 +47,9 @@ public class MaxHeap {
 			if(collection[leftChild(position)]>collection[rightChild(position)]) {
 				swap(position, leftChild(position));
 				maxHeapify(leftChild(position));
+			}else {
+				swap(position, rightChild(position));
+				maxHeapify(rightChild(position));
 			}
 		}
 	}
