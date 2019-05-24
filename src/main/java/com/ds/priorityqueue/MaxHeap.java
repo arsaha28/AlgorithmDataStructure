@@ -6,7 +6,9 @@ public class MaxHeap {
 	private int size = 0; 
 	
 	public MaxHeap(int size) {
-		collection = new int[size];
+		collection = new int[size+1];
+		collection[0]= Integer.MAX_VALUE;
+		
 	}
 	
 	private int parent(int position) {
@@ -20,8 +22,8 @@ public class MaxHeap {
 	}
 	
 	public void insert(int element) {
-		collection[size] = element;
 		size = size+1;
+		collection[size] = element;
 		int currentPosition = size;
 		while(collection[currentPosition]>collection[parent(currentPosition)]) {
 			swap(currentPosition, parent(currentPosition));
@@ -32,14 +34,16 @@ public class MaxHeap {
 	private void swap(int firstPosition,int secondPosition) {
 		int tmp;
 		tmp =  collection[firstPosition];
-		collection[firstPosition]= secondPosition;
+		collection[firstPosition]= collection[secondPosition];
 		collection[secondPosition] = tmp;
 	}
 	
 	public int delete() {
 		int deletedItem = collection[1];
-		collection[0] = collection[size-1];
-		maxHeapify(0);
+		collection[1] = collection[size];
+		collection[size] = 0;
+		size = size -1;
+		maxHeapify(1);
 		return deletedItem;
 	}
 	private void maxHeapify(int position) {
