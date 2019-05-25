@@ -8,7 +8,6 @@ public class MaxHeap {
 	public MaxHeap(int size) {
 		collection = new int[size+1];
 		collection[0]= Integer.MAX_VALUE;
-		
 	}
 	
 	private int parent(int position) {
