@@ -10,6 +10,8 @@ First part of this repository is dedicated for data structures
   
 # Algorithm [WIP]
   * Sorting
+     * Heap Sort
      * Insertion Sort
+     
   
   
