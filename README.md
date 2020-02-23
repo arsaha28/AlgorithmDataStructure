@@ -6,7 +6,7 @@ First part of this repository is dedicated for data structures
   * LinkedList
   * Queue
   * PriorityQueue
-  * BinarySearch Tree
+  * BinarySearch Tree(findParent(),insert(),inOrder(),preOrder(),postOrder())
   * Graph
   
 # Algorithm [WIP]
