@@ -49,4 +49,49 @@ public class BBinarySearchTree {
 		return findParent(data, root);
 	}
 
+	public void preOrder() {
+		if (root != null) {
+			preOrderTraversal(root);
+		}
+
+	}
+
+	private void preOrderTraversal(BSTNode bstNode) {
+		if (null != bstNode) {
+			System.out.print(bstNode.getData());
+			preOrderTraversal(bstNode.getLeftNode());
+			preOrderTraversal(bstNode.getRightNode());
+		}
+		
+	}
+
+	public void postOrder() {
+		if (root != null) {
+			postOrderTraversal(root);
+		}
+	}
+
+	private void postOrderTraversal(BSTNode bstNode) {
+		if (null != bstNode) {
+			postOrderTraversal(bstNode.getLeftNode());
+			postOrderTraversal(bstNode.getRightNode());
+			System.out.print(bstNode.getData());
+		}
+	}
+
+	public void inOrder() {
+		if (root != null) {
+			inOrderTraversal(root);
+		}
+
+	}
+
+	private void inOrderTraversal(BSTNode bstNode) {
+		if (null != bstNode) {
+			inOrderTraversal(bstNode.getLeftNode());
+			System.out.print(bstNode.getData());
+			inOrderTraversal(bstNode.getRightNode());
+		}
+	}
+
 }

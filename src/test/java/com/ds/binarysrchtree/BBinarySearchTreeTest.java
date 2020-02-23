@@ -7,19 +7,60 @@ import org.junit.Test;
 public class BBinarySearchTreeTest {
 	
 	@Test
-	public void insert() {
-		BBinarySearchTree bBinarySearchTree = new BBinarySearchTree();
-		bBinarySearchTree.insert(8);
-		bBinarySearchTree.insert(7);
-		bBinarySearchTree.insert(6);
-		bBinarySearchTree.insert(5);
-		bBinarySearchTree.insert(9);
-		bBinarySearchTree.insert(12);
-		assertEquals(5, bBinarySearchTree.findParent(4).getData());
-		assertEquals(8, bBinarySearchTree.findParent(9).getData());
-		assertEquals(9, bBinarySearchTree.findParent(12).getData());
-		
-		
+	public void insertCase_1() {
+		BBinarySearchTree binarySearchTree = new BBinarySearchTree();
+		binarySearchTree.insert(8);
+		binarySearchTree.insert(7);
+		binarySearchTree.insert(6);
+		binarySearchTree.insert(5);
+		binarySearchTree.insert(9);
+		binarySearchTree.insert(12);
+		binarySearchTree.insert(10);
+		assertEquals(5, binarySearchTree.findParent(4).getData());
+		assertEquals(8, binarySearchTree.findParent(9).getData());
+		assertEquals(9, binarySearchTree.findParent(12).getData());
+		assertEquals(12, binarySearchTree.findParent(10).getData());
+		binarySearchTree.inOrder();
 	}
+	@Test
+	public void insertCase_2() {
+		BBinarySearchTree binarySearchTree = new BBinarySearchTree();
+		binarySearchTree.insert(40);
+		binarySearchTree.insert(20);
+		binarySearchTree.insert(10);
+		binarySearchTree.insert(30);
+		binarySearchTree.insert(60);
+		binarySearchTree.insert(50);
+		binarySearchTree.insert(70);
+		assertEquals(40, binarySearchTree.findParent(20).getData());
+		assertEquals(20, binarySearchTree.findParent(10).getData());
+		assertEquals(20, binarySearchTree.findParent(30).getData());
+		assertEquals(40, binarySearchTree.findParent(60).getData());
+		assertEquals(60, binarySearchTree.findParent(50).getData());
+		assertEquals(60, binarySearchTree.findParent(70).getData());
+		binarySearchTree.inOrder();
+		System.out.println("\n");
+		binarySearchTree.postOrder();
+		System.out.println("\n");
+		binarySearchTree.preOrder();
+
+		
+
+	}
+	@Test
+	public void inOrderTraversal() {
+		BBinarySearchTree binarySearchTree = new BBinarySearchTree();
+		binarySearchTree.insert(8);
+		binarySearchTree.insert(7);
+		binarySearchTree.insert(6);
+		binarySearchTree.insert(5);
+		binarySearchTree.insert(9);
+		binarySearchTree.insert(12);
+		binarySearchTree.insert(10);
+		binarySearchTree.inOrder();
+		//TODO:Are you testing by comparing with your eyes!!
+	}
+	
+	
 
 }
