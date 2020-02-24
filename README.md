@@ -8,6 +8,7 @@ First part of this repository is dedicated for data structures
   * PriorityQueue
   * BinarySearch Tree(findParent(),insert(),inOrder(),preOrder(),postOrder())
   * Graph
+  * Trie
   
 # Algorithm [WIP]
   * Sorting
