@@ -40,4 +40,21 @@ public class GGraph {
 		}
 	}
 	
+	public void dfs(int vertex) {
+		boolean isVisited[] = new boolean[10];
+		dfsUtil(vertex,isVisited);
+	}
+	
+	private void dfsUtil(int vertex,boolean isVisited[]) {
+		isVisited[vertex] = true;
+		System.out.println(vertex);
+		Iterator<Integer> itr = adjacencyList[vertex].listIterator();
+		while(itr.hasNext()) {
+			int adjacentVertex = itr.next();
+			if(!isVisited[adjacentVertex]) {
+				dfsUtil(adjacentVertex, isVisited);
+			}
+		}
+	}
+	
 }
