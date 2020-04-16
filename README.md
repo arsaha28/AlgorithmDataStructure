@@ -14,10 +14,13 @@ First part of this repository is dedicated for data structures
   * Tree
   * Trie
   
-# Algorithm [WIP]
+# Algorithm 
   * Sorting
      * Heap Sort
      * Insertion Sort
+     * Selection Sort
+     * Merge Sort
+     * Quick Sort
      
      
   
