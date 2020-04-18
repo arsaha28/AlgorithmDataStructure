@@ -3,54 +3,42 @@ package com.algo.sort.merge;
 public class MergeSort {
 
 	public static void main(String[] args) {
-		int array[] = new int[] {9,7,8,2,3,4,5,6,1,0};
+		int array[] = new int[] { 9, 7, 8, 2};
+		int arrayAux[] = new int[array.length];
+		
 		MergeSort mergeSort = new MergeSort();
-		int sortedArray[] = mergeSort.sort(array, 0, array.length-1);
-		for (int i = 0; i < sortedArray.length; i++) {
-			System.out.print(sortedArray[i]);
+		mergeSort.sort(array, arrayAux,0, array.length - 1);
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i]);
 		}
 
 	}
-	
-	public  int[] sort(int array[],int low,int high) {
-		if(!(low>=high)) {
-			int middle = low+(high - low)/2;
-			int firstArray[] = sort(array ,low,middle);
-			int secondArray[] = sort(array,middle+1,high);
-			int mergedArray[] = merge(firstArray,secondArray,low,middle,high);
-			return mergedArray;
-		}
-		return array;
-		
+
+	public void sort(int array[],int arrayAux[], int low, int high) {
+		if (low >= high)
+			return;
+		int middle = low + (high - low)/ 2;
+		sort(array,arrayAux, low, middle);
+		sort(array,arrayAux, middle + 1, high);
+		merge(array, arrayAux,low, middle, high);
+
 	}
-	//Create two array by copying the elements
-	public int[] merge(int firstArray[],int secondArray[],int low,int middle,int high) {
-		int mergedArray[] = new int[high];
-		int i = low,j = middle+1,k = 0;;
-		while(i<middle || j<high) {
-			if(firstArray[i]>secondArray[j]) {
-				mergedArray[k]=firstArray[i];
-				k++;
-				i++;
-			}else if(firstArray[i]<secondArray[j]) {
-				mergedArray[k]=secondArray[j];
-				k++;
-				j++;
-			}else if(firstArray[i]==secondArray[j]) {
-				mergedArray[k]=secondArray[j];
-				k++;
-				j++;
-			}
+
+	
+	public void merge(int array[],int arrayAux[],int low, int middle, int high) {
+		int i = low;
+		int j = middle +1;
+		for(int k = low;k<=high;k++) {
+			arrayAux[k]=array[k];
 		}
-		for(int x=i ;x<middle;++x) {
-			mergedArray[k] = firstArray[x];
-			k++;
+		for(int k= low;k<=high;++k) {
+			if(i>middle) array[k] = arrayAux[j++];
+			else if(j>high) array[k] = arrayAux[i++];
+			else if(arrayAux[j]<arrayAux[i]) array[k] = arrayAux[j++];
+			else array[k] = arrayAux[i++];
+			
 		}
-		for(int x=i ;x<high;++x) {
-			mergedArray[k] = secondArray[x];
-			k++;
-		}
-		return mergedArray;
+	
 	}
 
 }
