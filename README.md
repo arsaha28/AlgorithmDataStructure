@@ -1,6 +1,6 @@
 # Algorithm and Datastructure project
 Goal of this repository is to provide detail examples and implementation of most common data structures and algorithm.
-First part of this repository is dedicated for data structures
+First part of this repository is dedicated for data structures.Reference book used =>Algorithms by Robert Sedgewick
 # Datastructure [WIP]
   * Stack
   * LinkedList
