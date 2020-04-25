@@ -3,13 +3,13 @@ package com.algo.sort.merge;
 public class MergeSort {
 
 	public static void main(String[] args) {
-		int array[] = new int[] { 9, 7, 8, 2};
+		int array[] = new int[] { 9, 7, 8, 2,10};
 		int arrayAux[] = new int[array.length];
 		
 		MergeSort mergeSort = new MergeSort();
 		mergeSort.sort(array, arrayAux,0, array.length - 1);
 		for (int i = 0; i < array.length; i++) {
-			System.out.print(array[i]);
+			System.out.print(array[i]+"\t");
 		}
 
 	}

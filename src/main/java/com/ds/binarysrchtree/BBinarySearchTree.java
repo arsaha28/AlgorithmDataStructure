@@ -19,6 +19,7 @@ public class BBinarySearchTree {
 		return node;
 	}
 
+	
 	public BSTNode findParent(int data, BSTNode node) {
 		if (node == null) {
 			return null;
@@ -48,7 +49,14 @@ public class BBinarySearchTree {
 	public BSTNode findParent(int data) {
 		return findParent(data, root);
 	}
-
+	
+	public BSTNode min() {
+		return findMin(root);
+	}
+	public BSTNode findMin(BSTNode node) {
+		if(node.getLeftNode() == null) return node;
+		else return findMin(node.getLeftNode());
+	}
 	public void preOrder() {
 		if (root != null) {
 			preOrderTraversal(root);

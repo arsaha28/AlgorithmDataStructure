@@ -61,6 +61,33 @@ public class BBinarySearchTreeTest {
 		//TODO:Are you testing by comparing with your eyes!!
 	}
 	
+	@Test
+	public void findMin_case1() {
+		BBinarySearchTree binarySearchTree = new BBinarySearchTree();
+		binarySearchTree.insert(40);
+		binarySearchTree.insert(20);
+		binarySearchTree.insert(10);
+		binarySearchTree.insert(30);
+		binarySearchTree.insert(60);
+		binarySearchTree.insert(50);
+		binarySearchTree.insert(70);
+		assertEquals(10, binarySearchTree.min().getData());
+	}
+	
+	@Test
+	public void findMin_case2() {
+		BBinarySearchTree binarySearchTree = new BBinarySearchTree();
+		binarySearchTree.insert(20);
+		binarySearchTree.insert(25);
+		binarySearchTree.insert(23);
+		binarySearchTree.insert(26);
+		binarySearchTree.insert(15);
+		binarySearchTree.insert(18);
+		binarySearchTree.insert(19);
+		binarySearchTree.insert(17);
+		binarySearchTree.insert(12);
+		assertEquals(12, binarySearchTree.min().getData());
+	}
 	
 
 }
