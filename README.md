@@ -6,7 +6,12 @@ First part of this repository is dedicated for data structures
   * LinkedList
   * Queue
   * PriorityQueue
-  * BinarySearch Tree(findParent(),insert(),inOrder(),preOrder(),postOrder())
+  * BinarySearch Tree
+     * insert
+     * findParent
+     * in order,preorder and postorder 
+     * findMin
+     * delete
   * Graph 
      * BFS
      * DFS
@@ -21,6 +26,8 @@ First part of this repository is dedicated for data structures
      * Selection Sort
      * Merge Sort
      * Quick Sort
+   * Search
+     * Binary Search
      
      
   
