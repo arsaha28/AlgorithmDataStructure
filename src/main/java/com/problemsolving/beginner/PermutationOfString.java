@@ -12,6 +12,7 @@ public class PermutationOfString {
 	}
 	
 	public void permutation(String input,int left,int right) {
+		//TODO:Comback to this condition
 		if(left == right) {
 			System.out.println(input);
 		}
