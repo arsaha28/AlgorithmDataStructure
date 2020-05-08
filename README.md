@@ -28,7 +28,12 @@ First part of this repository is dedicated for data structures.Reference book us
      * Quick Sort
    * Search
      * Binary Search
-     
+# Easy Problem Solving   
+  * Longest Palindrome substring
+  * Parenthesis validator
+  * Maximum sum subarray using Kadane algorithm
+  * Permutation of String
+  * Palindrome check
      
   
   
