@@ -32,7 +32,15 @@ public class GraphWeighted {
         a.getEdges().add(new EdgeWeighted(a, b, weight));
 
     }
-    
+    public boolean hasEdge(NodeWeighted source, NodeWeighted destination) {
+        LinkedList<EdgeWeighted> edges = source.getEdges();
+        for (EdgeWeighted edge : edges) {
+            if (edge.getDestination() == destination) {
+                return true;
+            }
+        }
+        return false;
+    }
     public void printEdges() {
         for (NodeWeighted node : nodes) {
             LinkedList<EdgeWeighted> edges = node.getEdges();
@@ -48,4 +56,12 @@ public class GraphWeighted {
         }
     }
 
+	public Set<NodeWeighted> getNodes() {
+		return nodes;
+	}
+
+	public void setNodes(Set<NodeWeighted> nodes) {
+		this.nodes = nodes;
+	}
+    
 }

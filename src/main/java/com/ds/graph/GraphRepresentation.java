@@ -19,7 +19,9 @@ public class GraphRepresentation {
 		graphWeighted.addEdge(nodeWeightedC, nodeWeightedE, 5);
 		graphWeighted.printEdges();
 		
-		
+		DijkstrasAlgorithm algorithm = new DijkstrasAlgorithm();
+		algorithm.nodes = graphWeighted.getNodes();
+		algorithm.findShortestPath(nodeWeightedA, nodeWeightedC);
 
 	}
 
