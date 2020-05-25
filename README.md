@@ -36,6 +36,7 @@ Reference book used
   * Maximum sum subarray using Kadane algorithm
   * Permutation of String
   * Palindrome check
+  * Reverse a singly linked list in iterative approach
      
   
   
