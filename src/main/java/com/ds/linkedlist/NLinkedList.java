@@ -36,10 +36,10 @@ public class NLinkedList<T> {
 		}else {
 			Node<T> currentNode = header;
 			while(!(currentNode.getNext() == null)) {
-				System.out.println(currentNode.getValue());
+				System.out.print(currentNode.getValue()+"\t");
 				currentNode = currentNode.getNext();
 			}
-			System.out.println(currentNode.getValue());
+			System.out.print(currentNode.getValue()+"\t");
 		}
 	}
 	
@@ -81,6 +81,19 @@ public class NLinkedList<T> {
 		return false;
 	}
 	
+	public void reverse() {
+		Node<T> previous = null;
+		Node<T> next = header;
+		Node<T> current = header;
+		
+		while(null != current) {
+			next = current.getNext();
+			current.setNext(previous);
+			previous = current;
+			current = next;	
+		}
+		header = previous;
+	}
 	public void printInReverse() {
 		Object array[] = new Object[this.size];
 		if(header == null) {
