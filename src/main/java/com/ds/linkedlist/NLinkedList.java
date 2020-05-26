@@ -2,7 +2,7 @@ package com.ds.linkedlist;
 
 public class NLinkedList<T> {
 
-	private Node<T> header;
+	public Node<T> header;
 	private int size;
 
 	public boolean insert(T value) {

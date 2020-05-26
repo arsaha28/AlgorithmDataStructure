@@ -37,6 +37,7 @@ Reference book used
   * Permutation of String
   * Palindrome check
   * Reverse a singly linked list in iterative approach
+  * Merge two sorted list
      
   
   
