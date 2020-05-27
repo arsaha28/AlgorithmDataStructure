@@ -32,4 +32,9 @@ public class BSTNode {
 	public void setRightNode(BSTNode rightNode) {
 		this.rightNode = rightNode;
 	}
+	
+	@Override
+	public String toString() {
+		return String.valueOf(this.data);
+	}
 }

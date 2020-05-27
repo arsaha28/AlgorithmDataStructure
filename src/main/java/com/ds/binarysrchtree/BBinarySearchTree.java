@@ -2,7 +2,7 @@ package com.ds.binarysrchtree;
 
 public class BBinarySearchTree {
 
-	private BSTNode root;
+	public BSTNode root;
 
 	public BSTNode insert(int data) {
 		BSTNode node = new BSTNode(data);
