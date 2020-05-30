@@ -97,7 +97,7 @@ public class BBinarySearchTree {
 	private void inOrderTraversal(BSTNode bstNode) {
 		if (null != bstNode) {
 			inOrderTraversal(bstNode.getLeftNode());
-			System.out.print(bstNode.getData()+"||");
+			System.out.print(bstNode.getData()+"=>");
 			inOrderTraversal(bstNode.getRightNode());
 		}
 	}
